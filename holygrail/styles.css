@@ -1,9 +1,6 @@
 body {
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 header {
@@ -15,24 +12,29 @@ header {
   flex-basis: 100%;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 nav.side-nav {
   background-color: #ccc;
   flex-basis: 20%;
+  order: 1;
 }
 
 aside.ad {
   background-color: steelblue;
   flex-basis: 20%;
   text-align: center;
+  order: 3;
 }
 
-main {
+article {
   min-height: 800px;
   flex-basis: 60%;
-}
-
-main h2 {
-  margin-left: 10px;
+  order: 2;
 }
 
 main p {
@@ -41,7 +43,8 @@ main p {
 
 footer {
   background-color: lightgreen;
-  padding-left: 1em;
+  height: 2em;
+  margin: 0;
   flex-basis: 100%;
 }
 
